@@ -9,6 +9,10 @@ import UseStateSamplePage from './pages/useStates/UseStateSamplePage';
 import { Link, Outlet, useRoutes } from 'react-router-dom';
 import SiteLayout from './layouts/SiteLayout';
 import UseEffectSamplePage from './pages/useEffects/UseEffectSamplePage';
+import ReactMemoSamplePage from './pages/reactMemos/ReactMemoSamplePage';
+import UseRefSampleDemo from './pages/useRefs/UseRefSampleDemo';
+import UseRefSampleHtmlElementRefDemo from './pages/useRefs/UseRefSampleHtmlElementRefDemo';
+import UseMemoSample from './pages/useMemos/UseMemoSample';
 function App() {
 	// appcomponent dosyasını routing amaçlı kullanıyoruz.
 	return useRoutes([
@@ -22,8 +26,24 @@ function App() {
 					Component: UseStateSamplePage,
 				},
 				{
-					path:'/useEffectDemo',
-					Component:UseEffectSamplePage
+					path: '/useEffectDemo',
+					Component: UseEffectSamplePage,
+				},
+				{
+					path: '/reactMemoDemo',
+					Component: ReactMemoSamplePage,
+				},
+				{
+					path: '/useRefDemo',
+					Component: UseRefSampleDemo,
+				},
+				{
+					path: '/useRefHtmlElement',
+					Component: UseRefSampleHtmlElementRefDemo,
+				},
+				{
+					path: '/UseMemoDemo',
+					Component: UseMemoSample,
 				},
 				{
 					path: '*',

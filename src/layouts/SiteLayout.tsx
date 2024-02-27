@@ -9,6 +9,10 @@ function SiteLayout() {
 				<nav>
 					<Link to="/useStateDemo">useStateDemo</Link>{' '}
 					<Link to="/useEffectDemo">Use Effect Demo</Link>{' '}
+					<Link to="/reactMemoDemo">React Memo Demo</Link>{' '}
+					<Link to="/useRefDemo">Use Ref Demo</Link>{' '}
+					<Link to="/useRefHtmlElement">useRef HtmlElement Demo</Link>{' '}
+					<Link to="/UseMemoDemo">Use Memo Demo</Link>{' '}
 					<a href="/useStateDemo"> useStateDemo Href</a>
 				</nav>
 				<main>
