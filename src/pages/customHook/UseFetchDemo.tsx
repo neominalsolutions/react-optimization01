@@ -15,9 +15,7 @@ function UseFetchDemo() {
 	// 		});
 	// }, []);
 
-	const { isSucceeded, data, error } = UseFetch(
-		'https://jsonplaceholder.typicode.com/todos'
-	);
+	const { isSucceeded, data, error } = UseFetch('todos');
 
 	if (error) return <>Veri çekilirken hata oluştu</>;
 
