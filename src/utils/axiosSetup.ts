@@ -7,16 +7,33 @@ import axios, {
 
 function OnRequest(config: InternalAxiosRequestConfig) {
 	console.log('OnRequest', config);
+
+	const token = localStorage.getItem('token');
+
+	if (token) {
+		config.headers['Authorization'] = `Bearer ${token}`
+	}
+
 	return config;
 }
 
 function OnRequestError(error: AxiosError) {
 	console.log('OnRequestError', error);
+
+   
+
 	return Promise.reject(error);
 }
 
 function OnResponse(response: AxiosResponse) {
 	console.log('onResponse', response);
+
+	// ara işlemler yapabiliriz.
+	if (response.status === 200 && response.config.url === 'login') {
+		localStorage.setItem('token', response.data['token']);
+		window.location.href = '/';
+	}
+
 	return response;
 }
 

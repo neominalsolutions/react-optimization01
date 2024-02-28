@@ -16,6 +16,7 @@ import UseMemoSample from './pages/useMemos/UseMemoSample';
 import UseCallbackSampleDemo from './pages/useCallbacks/UseCallbackSampleDemo';
 import UseReducerSampleDemo from './pages/useReducers/UseReducerSampleDemo';
 import UseFetchDemo from './pages/customHook/UseFetchDemo';
+import LoginDemo from './pages/login/LoginDemo';
 function App() {
 	// appcomponent dosyasını routing amaçlı kullanıyoruz.
 	return useRoutes([
@@ -59,6 +60,10 @@ function App() {
 				{
 					path: '/useFetchDemo',
 					Component: UseFetchDemo,
+				},
+				{
+					path: '/loginDemo',
+					Component: LoginDemo,
 				},
 				{
 					path: '*',

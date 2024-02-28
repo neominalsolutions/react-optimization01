@@ -16,6 +16,7 @@ function SiteLayout() {
 					<Link to="/useCallbackDemo">Use Callback Demo</Link>{' '}
 					<Link to="/useReducerDemo">Use Reducer Demo</Link>{' '}
 					<Link to="/useFetchDemo">Use Fetch Demo</Link>{' '}
+					<Link to="/loginDemo">Login Demo</Link>{' '}
 					<a href="/useStateDemo">useStateDemo Href</a>
 				</nav>
 				<main>
