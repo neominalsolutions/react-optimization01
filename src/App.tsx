@@ -14,6 +14,7 @@ import UseRefSampleDemo from './pages/useRefs/UseRefSampleDemo';
 import UseRefSampleHtmlElementRefDemo from './pages/useRefs/UseRefSampleHtmlElementRefDemo';
 import UseMemoSample from './pages/useMemos/UseMemoSample';
 import UseCallbackSampleDemo from './pages/useCallbacks/UseCallbackSampleDemo';
+import UseReducerSampleDemo from './pages/useReducers/UseReducerSampleDemo';
 function App() {
 	// appcomponent dosyasını routing amaçlı kullanıyoruz.
 	return useRoutes([
@@ -49,6 +50,10 @@ function App() {
 				{
 					path: '/useCallbackDemo',
 					Component: UseCallbackSampleDemo,
+				},
+				{
+					path: '/useReducerDemo',
+					Component: UseReducerSampleDemo,
 				},
 				{
 					path: '*',
