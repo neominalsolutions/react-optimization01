@@ -17,6 +17,7 @@ function SiteLayout() {
 					<Link to="/useReducerDemo">Use Reducer Demo</Link>{' '}
 					<Link to="/useFetchDemo">Use Fetch Demo</Link>{' '}
 					<Link to="/loginDemo">Login Demo</Link>{' '}
+					<Link to="/debouncing">Debouncing</Link>{' '}
 					<a href="/useStateDemo">useStateDemo Href</a>
 				</nav>
 				<main>
