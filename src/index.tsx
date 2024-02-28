@@ -12,14 +12,14 @@ const root = ReactDOM.createRoot(
 
 // Production build alırken strictmode devre dışı kalır.
 root.render(
-	// <React.StrictMode>
-	<BrowserRouter>
-		<CartProvider>
-			{/* cartprovider altında ne kadar component varsa hepsi provider tanımından dolayı cart state görecektir. */}
-			<App />
-		</CartProvider>
-	</BrowserRouter>
-	// </React.StrictMode>
+	<React.StrictMode>
+		<BrowserRouter>
+			<CartProvider>
+				{/* cartprovider altında ne kadar component varsa hepsi provider tanımından dolayı cart state görecektir. */}
+				<App />
+			</CartProvider>
+		</BrowserRouter>
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

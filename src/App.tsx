@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component, ReactNode, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import { UseStateSamplePage } from './pages/useStates/UseStateSamplePage';
@@ -6,7 +6,7 @@ import './App.css';
 // import * as m from './pages/useStates/UseStateSamplePage';
 // import { UseStateSamplePage } from './pages/useStates/UseStateSamplePage';
 import UseStateSamplePage from './pages/useStates/UseStateSamplePage';
-import { Link, Outlet, useRoutes } from 'react-router-dom';
+import { Link, Outlet, RouteObject, useRoutes } from 'react-router-dom';
 import SiteLayout from './layouts/SiteLayout';
 import UseEffectSamplePage from './pages/useEffects/UseEffectSamplePage';
 import ReactMemoSamplePage from './pages/reactMemos/ReactMemoSamplePage';
@@ -18,8 +18,31 @@ import UseReducerSampleDemo from './pages/useReducers/UseReducerSampleDemo';
 import UseFetchDemo from './pages/customHook/UseFetchDemo';
 import LoginDemo from './pages/login/LoginDemo';
 import ProductSearchDemo from './pages/debouncing/ProductSearchDemo';
+
+import routes from './utils/routes.json';
+import { componentRegistry } from './utils/ComponentRegistry';
+
 function App() {
 	// appcomponent dosyasını routing amaçlı kullanıyoruz.
+
+	// console.log('routes', routes);
+
+	// const _routes = (routes as any[]).map((item: any) => {
+	// 	return {
+	// 		path: item.path,
+	// 		Component: componentRegistry[item.component],
+	// 		children: item.children.map((child: any) => {
+	// 			return {
+	// 				path: child.path,
+	// 				Component: componentRegistry[child.component],
+	// 				children: [],
+	// 			} as RouteObject;
+	// 		}),
+	// 	} as RouteObject;
+	// });
+
+	// return useRoutes(_routes);
+
 	return useRoutes([
 		{
 			path: '/', // ana path ile layout görünümünü karşılastın

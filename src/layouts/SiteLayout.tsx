@@ -5,6 +5,9 @@ import {
 	CartContextType,
 } from '../pages/useContexts/CartProvider';
 // rfce kısayolu ile component oluşturduk
+
+import routes from '../utils/routes.json';
+
 function SiteLayout() {
 	// burada state select edip state başka bir componente değişirken useContext hook ile yakalıyoruz. değişimi takibe alıp componentin yeniden yeni cart değerine göre render olmasını sağlıyoruz.
 	const { cart } = useContext(CartContext) as CartContextType;
@@ -18,6 +21,16 @@ function SiteLayout() {
 					Toplam Adet: {cart.items.length}
 				</header>
 				<nav>
+					{/* dinamik menü örneği from json */}
+					{(routes as any).map((item: any, index: number) => {
+						return (
+							<>
+								<Link key={index} to={item.path}>
+									{item.menu_name}
+								</Link>{' '}
+							</>
+						);
+					})}
 					<Link to="/useStateDemo">useStateDemo</Link>{' '}
 					<Link to="/useEffectDemo">Use Effect Demo</Link>{' '}
 					<Link to="/reactMemoDemo">React Memo Demo</Link>{' '}

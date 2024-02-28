@@ -1,0 +1,15 @@
+ [
+        {
+            "path"                   : "/",
+            "component"              : "SiteLayout",
+            "menu_name"              :  "Layout",
+            "children" : [
+                {
+
+                    "path"           : "/useStateDemo",
+                    "component"      : "UseState",
+                    "menu_name"              :  "Use State Demo"
+                }
+            ]
+        }
+    ]
