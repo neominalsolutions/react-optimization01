@@ -13,6 +13,7 @@ import ReactMemoSamplePage from './pages/reactMemos/ReactMemoSamplePage';
 import UseRefSampleDemo from './pages/useRefs/UseRefSampleDemo';
 import UseRefSampleHtmlElementRefDemo from './pages/useRefs/UseRefSampleHtmlElementRefDemo';
 import UseMemoSample from './pages/useMemos/UseMemoSample';
+import UseCallbackSampleDemo from './pages/useCallbacks/UseCallbackSampleDemo';
 function App() {
 	// appcomponent dosyasını routing amaçlı kullanıyoruz.
 	return useRoutes([
@@ -44,6 +45,10 @@ function App() {
 				{
 					path: '/UseMemoDemo',
 					Component: UseMemoSample,
+				},
+				{
+					path: '/useCallbackDemo',
+					Component: UseCallbackSampleDemo,
 				},
 				{
 					path: '*',

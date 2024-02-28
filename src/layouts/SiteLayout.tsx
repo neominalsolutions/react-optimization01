@@ -13,7 +13,8 @@ function SiteLayout() {
 					<Link to="/useRefDemo">Use Ref Demo</Link>{' '}
 					<Link to="/useRefHtmlElement">useRef HtmlElement Demo</Link>{' '}
 					<Link to="/UseMemoDemo">Use Memo Demo</Link>{' '}
-					<a href="/useStateDemo"> useStateDemo Href</a>
+					<Link to="/useCallbackDemo">Use Callback Demo</Link>{' '}
+					<a href="/useStateDemo">useStateDemo Href</a>
 				</nav>
 				<main>
 					<Outlet />
