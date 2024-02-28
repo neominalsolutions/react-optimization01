@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import CartProvider from './pages/useContexts/CartProvider';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -13,7 +14,10 @@ const root = ReactDOM.createRoot(
 root.render(
 	// <React.StrictMode>
 	<BrowserRouter>
-		<App />
+		<CartProvider>
+			{/* cartprovider altında ne kadar component varsa hepsi provider tanımından dolayı cart state görecektir. */}
+			<App />
+		</CartProvider>
 	</BrowserRouter>
 	// </React.StrictMode>
 );

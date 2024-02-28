@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import {
+	CartContext,
+	CartContextType,
+} from '../pages/useContexts/CartProvider';
 // rfce kısayolu ile component oluşturduk
 function SiteLayout() {
+	// burada state select edip state başka bir componente değişirken useContext hook ile yakalıyoruz. değişimi takibe alıp componentin yeniden yeni cart değerine göre render olmasını sağlıyoruz.
+	const { cart } = useContext(CartContext) as CartContextType;
+
 	return (
 		<div style={{ padding: '1rem' }}>
 			<>
-				<header>Üst Bilgi</header>
+				<header>
+					Toplam Sepet Fiyat: {cart.total}
+					<br></br>
+					Toplam Adet: {cart.items.length}
+				</header>
 				<nav>
 					<Link to="/useStateDemo">useStateDemo</Link>{' '}
 					<Link to="/useEffectDemo">Use Effect Demo</Link>{' '}
