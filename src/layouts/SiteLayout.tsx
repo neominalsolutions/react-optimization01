@@ -22,7 +22,7 @@ function SiteLayout() {
 				</header>
 				<nav>
 					{/* dinamik menü örneği from json */}
-					{(routes as any).map((item: any, index: number) => {
+					{/* {(routes as any).map((item: any, index: number) => {
 						return (
 							<>
 								<Link key={index} to={item.path}>
@@ -30,7 +30,7 @@ function SiteLayout() {
 								</Link>{' '}
 							</>
 						);
-					})}
+					})} */}
 					<Link to="/useStateDemo">useStateDemo</Link>{' '}
 					<Link to="/useEffectDemo">Use Effect Demo</Link>{' '}
 					<Link to="/reactMemoDemo">React Memo Demo</Link>{' '}
@@ -42,6 +42,7 @@ function SiteLayout() {
 					<Link to="/useFetchDemo">Use Fetch Demo</Link>{' '}
 					<Link to="/loginDemo">Login Demo</Link>{' '}
 					<Link to="/debouncing">Debouncing</Link>{' '}
+					<Link to="/useImperative">UseImperativeHandle Hook</Link>{' '}
 					<a href="/useStateDemo">useStateDemo Href</a>
 				</nav>
 				<main>

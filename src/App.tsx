@@ -1,4 +1,4 @@
-import React, { Component, ReactNode, useState } from 'react';
+import React, { Component, ReactNode, useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import { UseStateSamplePage } from './pages/useStates/UseStateSamplePage';
@@ -8,7 +8,7 @@ import './App.css';
 import UseStateSamplePage from './pages/useStates/UseStateSamplePage';
 import { Link, Outlet, RouteObject, useRoutes } from 'react-router-dom';
 import SiteLayout from './layouts/SiteLayout';
-import UseEffectSamplePage from './pages/useEffects/UseEffectSamplePage';
+// import UseEffectSamplePage from './pages/useEffects/UseEffectSamplePage';
 import ReactMemoSamplePage from './pages/reactMemos/ReactMemoSamplePage';
 import UseRefSampleDemo from './pages/useRefs/UseRefSampleDemo';
 import UseRefSampleHtmlElementRefDemo from './pages/useRefs/UseRefSampleHtmlElementRefDemo';
@@ -21,11 +21,19 @@ import ProductSearchDemo from './pages/debouncing/ProductSearchDemo';
 
 import routes from './utils/routes.json';
 import { componentRegistry } from './utils/ComponentRegistry';
+import UseImperativeDemo from './pages/useImperatives/UseImperativeDemo';
+
+
+const UseEffectSamplePage = React.lazy(()=> import("./pages/useEffects/UseEffectSamplePage"));
 
 function App() {
 	// appcomponent dosyasını routing amaçlı kullanıyoruz.
 
 	// console.log('routes', routes);
+
+	useEffect(() => {
+		// apidan route load etme yöntemi.
+	}, []);
 
 	// const _routes = (routes as any[]).map((item: any) => {
 	// 	return {
@@ -92,6 +100,10 @@ function App() {
 				{
 					path: '/debouncing',
 					Component: ProductSearchDemo,
+				},
+				{
+					path: '/useImperative',
+					Component: UseImperativeDemo,
 				},
 				{
 					path: '*',

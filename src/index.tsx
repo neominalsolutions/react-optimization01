@@ -14,10 +14,13 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<CartProvider>
-				{/* cartprovider altında ne kadar component varsa hepsi provider tanımından dolayı cart state görecektir. */}
-				<App />
-			</CartProvider>
+			<React.Suspense fallback={<>...Loading</>}>
+				<CartProvider>
+					{/* cartprovider altında ne kadar component varsa hepsi provider tanımından dolayı cart state görecektir. */}
+
+					<App />
+				</CartProvider>
+			</React.Suspense>
 		</BrowserRouter>
 	</React.StrictMode>
 );
